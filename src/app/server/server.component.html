@@ -1,0 +1,25 @@
+   
+      <h1>Add the server Name</h1>
+      <input 
+      type="text"
+      class="form-control"
+      (input)="onInputUpdate($event)"
+      >
+   <button 
+   [disabled]="buttonGetDisabled"
+   class="btn btn-primary"
+   (click)="onCreateServer()"
+   >Click Me</button>
+   <!-- <input 
+      type="text"
+      class="form-control"
+      (input)="onInputUpdate($event)"
+   > -->
+
+   <!-- <h1 [innerText]="buttonGetDisabled"></h1> -->
+   <!-- <h1>{{buttonGetDisabled}}</h1> -->
+   <h1>The server name is {{serverName}}</h1>
+   <h1 *ngIf="!buttonClicked;  else noServer">{{serverCreationStatus}}</h1>
+   <ng-template #noServer> <p>No server was created!</p></ng-template>
+ 
+   <!-- <h1>Server {{getServerId() }}  is {{serverStatus}}</h1> -->
