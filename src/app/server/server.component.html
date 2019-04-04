@@ -10,16 +10,11 @@
    class="btn btn-primary"
    (click)="onCreateServer()"
    >Click Me</button>
-   <!-- <input 
-      type="text"
-      class="form-control"
-      (input)="onInputUpdate($event)"
-   > -->
-
-   <!-- <h1 [innerText]="buttonGetDisabled"></h1> -->
-   <!-- <h1>{{buttonGetDisabled}}</h1> -->
    <h1>The server name is {{serverName}}</h1>
    <h1 *ngIf="!buttonClicked;  else noServer">{{serverCreationStatus}}</h1>
    <ng-template #noServer> <p>No server was created!</p></ng-template>
+
+   <p [ngStyle]="{backgroundColor:getColor()}">Sever 1 is {{serverStatus}}</p>
+   <p [ngStyle]="{backgroundColor:getColor()}">Server 2 is {{serverStatus}}</p>
  
    <!-- <h1>Server {{getServerId() }}  is {{serverStatus}}</h1> -->

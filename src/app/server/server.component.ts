@@ -19,6 +19,8 @@ export class ServerComponent{
     setTimeout(() => {
         this.buttonGetDisabled=false;
     }, 2000);
+    this.serverStatus = Math.random()> 0.5 ? 'online' : 'offline';
+
  }
  onCreateServer(){
      this.buttonClicked=false;
@@ -26,6 +28,9 @@ export class ServerComponent{
  }
  onInputUpdate(event: any){
     this.serverName=event.target.value;
+ }
+ getColor(){
+     return this.serverStatus === 'online' ? 'green' : 'red';
  }
 
 }
